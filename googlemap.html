@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Test</title>
+<title></title>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
@@ -24,8 +24,7 @@ function GetURLParameter(name) {
 	var lat = parseFloat(GetURLParameter('lat'));
 	var lng = parseFloat(GetURLParameter('lng'));
 	var range = parseFloat(GetURLParameter('zoom'));
-	var dsc = decodeURIComponent(GetURLParameter('description'));
-	
+	var dsc = decodeURIComponent(GetURLParameter('description'));	
 
       ge = instance;
       ge.getWindow().setVisibility(true);
@@ -54,8 +53,8 @@ function GetURLParameter(name) {
 
 		// Set the placemark's location.  
 		var point = ge.createPoint('');
-		point.setLatitude(33.171331);
-		point.setLongitude(-97.882403);
+		point.setLatitude(lat);
+		point.setLongitude(lng);
 		placemark.setGeometry(point);
 
 		// Add the placemark to Earth.
